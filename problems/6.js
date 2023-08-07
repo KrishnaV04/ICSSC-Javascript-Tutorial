@@ -7,7 +7,11 @@
  * @example [1, 2, 3] -> 6
 */
 function problem(numbers) {
-    return null;
+    total = 0
+    for (const i of numbers) {
+        total += i;
+    }
+    return total;
 }
 
 const tests = [

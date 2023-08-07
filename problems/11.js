@@ -8,7 +8,12 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    str = str.split("").filter((ch) => ch != ' ').join("").toLowerCase();
+    for (let index = 0; index < str.length/2; ++index) {
+        if (str[index] != str[str.length-1-index])
+        {return false;}
+    }
+    return true;
 }
 
 const tests = [

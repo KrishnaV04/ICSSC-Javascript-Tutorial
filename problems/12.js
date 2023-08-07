@@ -11,7 +11,18 @@
  * @example "apple" -> "$1.29"
 */
 function problem(fruit) {
-    return null;
+    switch (fruit) {
+        case 'orange':
+            return "$1";
+        case 'apple':
+            return "$1.29";
+        case 'grapes':
+            return "$1.50";
+        case 'banana':
+            return "$0.75";
+        default:
+            return "$2";
+    }
 }
 
 const tests = [

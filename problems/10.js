@@ -7,7 +7,10 @@
  * @example "abcdef" -> "ABCdef"
 */
 function problem(str) {
-    return null;
+    const arr = str.split("")
+    return (arr.map(function(ch, i){
+        return (i < parseInt(str.length / 2)) ? ch.toUpperCase() : ch.toLowerCase()
+    })).join("");
 }
 
 const tests = [

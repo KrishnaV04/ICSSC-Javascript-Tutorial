@@ -7,7 +7,21 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
-    return null;
+    const mem = {};
+    let num = numbers[0];
+    let count = 0;
+    for (const n of numbers) {
+        if (n in mem){
+            mem[n] += 1;
+            if (mem[n] > count){
+                count = mem[n];
+                num = n;
+            }
+        } else {
+            mem[n] = 1;
+        }
+    }
+    return num;
 }
 
 const tests = [
